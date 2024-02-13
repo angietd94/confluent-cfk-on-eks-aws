@@ -104,3 +104,4 @@ spec:
   dependencies:
     schemaRegistry:
       url: http://schemaregistry.confluent.svc.cluster.local:8081
+      
