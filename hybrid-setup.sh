@@ -16,10 +16,6 @@ confluent environment use $ENV
 CC_ENV=$(confluent environment list -o json | jq -r ".[] | select(.name | contains(\"$cluster_name\")) | .id") && echo "Your Confluent Cloud environment: $CC_ENV" && confluent environment use $CC_ENV
 
 
-ataccadughetti+ubb@confluent.io
-SabaTbilisi?1996  
-
-
 CCLOUD_CLUSTER_ID=$(confluent kafka cluster list -o json \
                   | jq -r '.[] | select(.name | contains(\"$cluster_name\")) | .id') \
 && echo "Your Confluent Cloud cluster ID: $CCLOUD_CLUSTER_ID" \
